@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit';
+import products from '../../asserts/data/productsData.json';
 const init = {
-  products: [],
+  products: products,
 };
 
 const productSlice = createSlice({
@@ -8,7 +9,7 @@ const productSlice = createSlice({
   initialState: init,
   reducers: {
     addProduct: state => {
-      state.products.push('new product');
+      state.products = products;
     },
   },
 });
